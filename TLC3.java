@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 public class TLC3 {
+    //the lazy cow, silver
     public static void main(String[] args) throws IOException{
         Kattio kattio =new Kattio("lazy");
         int n = kattio.nextInt();
