@@ -55,7 +55,8 @@ public class B {
         }
 
         // Calculate maximum edges that can be added between different colors
-        // Subtract 1 from each count because we already have N-1 edges
+        // Formula: (red-1)*(blue-1) = red*blue - red - blue + 1 = red*blue - (N-1)
+        // This represents total possible bipartite edges minus existing tree edges
         io.println((red - 1) * (blue - 1));
         io.close();
     }

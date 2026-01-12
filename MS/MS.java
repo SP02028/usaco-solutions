@@ -1,10 +1,29 @@
+/**
+ * Problem: MS (Position-based Weighted Sum)
+ * 
+ * This solution calculates a weighted sum where each element's contribution
+ * is its value multiplied by its position in the sorted order, then handles
+ * queries that modify elements and report the new weighted sum.
+ * 
+ * Approach:
+ * - Sort array and track original positions
+ * - Calculate initial weighted sum: sum of (position * value)
+ * - For each query updating element j to new value:
+ *   - Find new position in sorted order using binary search
+ *   - Efficiently recalculate weighted sum using prefix sums
+ *   - Adjust for elements that shift positions
+ * 
+ * Time Complexity: O(N log N + Q log N) where Q is number of queries
+ * Space Complexity: O(N) for arrays and mappings
+ */
 import java.util.*;
 import java.io.*;
+
 public class MS {
     /**
-     * The main method is the entry point of the program. It processes input
-     * data, performs computations such as sorting and prefix sum calculations,
-     * and handles queries to update and retrieve data based on problem logic.
+     * Main method that processes array and answers queries about weighted sums.
+     * Each query updates one element and asks for the resulting weighted sum
+     * where weights are positions in sorted order.
      *
      * @param args the command-line arguments passed to the program
      */
