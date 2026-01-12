@@ -34,9 +34,11 @@ public class TLC3 {
         }
 
         // Read and transform coordinates
+        // Rotate field 45 degrees: transform (i,j) -> (i+j, n-i+j-1)
+        // This converts Manhattan distance (|x1-x2| + |y1-y2|) into Chebyshev distance (max(|x1-x2|, |y1-y2|))
+        // After rotation, all cells within K steps form a square region instead of a diamond
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
-                // Transform (i,j) to (i+j, n-i+j-1) to rotate 45 degrees
                 field[i + j][n - i + j - 1] = kattio.nextInt();
             }
         }
