@@ -8,8 +8,6 @@ A comprehensive collection of competitive programming solutions from USACO (USA 
 - **Total Solutions**: 347+ Java implementations
 - **Competitions**: USACO (Bronze, Silver, Gold, Platinum), Codeforces
 - **Language**: Java
-- **Started**: November 2024 (317 problems)
-
 ## 🎯 Purpose
 
 This repository serves as:
@@ -74,23 +72,10 @@ problem-name/
 - Prefix sums
 - Two pointers technique
 
-#### Gold Division
-- Dynamic programming
-- Shortest paths (Dijkstra, Floyd-Warshall)
-- Minimum spanning trees
-- Binary search on answer
-- Advanced graph algorithms
-
-#### Platinum Division
-- Advanced dynamic programming
-- Segment trees and other advanced data structures
-- Network flow
-- Computational geometry
-
 ### Codeforces Problems
 - Diverse problem set ranging from implementation to advanced algorithms
-- Rating range: 800-2400+
-- Topics: Math, DP, Graphs, Data Structures, Strings, Geometry
+- Rating range: 800-1600
+- Topics: Math, Graphs, Data Structures, Strings, Geometry
 
 ## 🔑 Key Algorithms & Techniques
 
@@ -103,13 +88,6 @@ This repository includes implementations of:
 - Union-Find (Disjoint Set Union)
 - Topological Sort
 - Minimum Spanning Tree
-
-### Dynamic Programming
-- Knapsack variants
-- Longest Common Subsequence
-- Range DP
-- Tree DP
-- Bitmask DP
 
 ### Data Structures
 - Binary Search Trees
@@ -138,7 +116,7 @@ Here are some notable problems in this repository:
 - **Searching for Soulmates**: Recursive optimization problem
 - **Year of The Cow**: Greedy algorithm with gap optimization
 
-## 💡 Code Quality
+##  Code Quality
 
 All solutions in this repository:
 - Follow consistent Java coding conventions
@@ -147,14 +125,7 @@ All solutions in this repository:
 - Implement efficient algorithms with appropriate time/space complexity
 - Are properly formatted with 4-space indentation
 
-## 📈 Progress Tracking
-
-**Current Status** (as of November 2024):
-- ✅ 317+ problems completed at season start
-- 🎯 Goal: Continue improving and adding more advanced problems
-- 📝 Focus: USACO 2025-26 season preparation
-
-## 🤝 Contributing
+## Contributing
 
 This is a personal repository for tracking my competitive programming journey. However, if you find any bugs or have suggestions for improvements, feel free to open an issue.
 
@@ -167,8 +138,6 @@ This repository is for educational purposes. Problems are property of their resp
 - [USACO Official Website](http://www.usaco.org/)
 - [USACO Guide](https://usaco.guide/)
 - [Codeforces](https://codeforces.com/)
-- [Competitive Programming Resources](https://github.com/lnishan/awesome-competitive-programming)
-
 ---
 
 **Note**: Solutions are meant for learning and reference. Please attempt problems yourself before viewing solutions.
