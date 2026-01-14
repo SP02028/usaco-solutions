@@ -3,13 +3,7 @@
  * 
  * This solution finds the minimum number of operations to transform number a into number b.
  * Operations allowed: +1, divide by 2 (if even), multiply by 2.
- * 
- * Approach:
- * - Use recursive approach with memoization
- * - If a == b, answer is 0
- * - If a > b, can only decrease a: make it even (+1 if odd) then divide by 2
- * - If a < b, try both: direct addition (b-a) or make b reachable via division
- * 
+
  * Time Complexity: O(log max(a,b)) recursive depth
  * Space Complexity: O(log max(a,b)) for recursion stack
  */
