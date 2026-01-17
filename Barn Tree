@@ -1,0 +1,118 @@
+import java.io.*;
+import java.util.*;
+
+public class BT2 {
+   static List<Integer>[] adj;
+   static int ans;
+   static long[] subtreesum;
+   static boolean[] visited;
+   static int[] parents;
+   static List<long[]>[] dependencies;
+   static int[] degree;
+    public static void main(String[] args) {
+        Kattio kattio =new Kattio();
+        int N = kattio.nextInt();
+        int[] vals = new int[N+1];
+        long sum = 0;
+        for (int i = 1; i < N+1; i++) {
+            vals[i] = kattio.nextInt();
+            sum +=vals[i];
+        }
+        long avg =  sum/N;
+        visited=  new boolean[N];
+        long[] delta = new long[N+1];
+        subtreesum = new long[N+1];
+        for (int i = 1; i <=N; i++) {
+            delta[i] = vals[i]-avg;
+        }
+        parents = new int[N+1];
+        //everything is 1 indexed
+        adj = new List[N+1];
+        for (int i = 1; i <= N; i++) {
+            adj[i] = new ArrayList<>();
+        }
+        for (int i = 0; i < N-1; i++) {
+            int a = kattio.nextInt();
+            int b = kattio.nextInt();
+            adj[a].add(b);
+            adj[b].add(a);
+        }
+            dfs(delta, 1, 1);
+        dependencies = new ArrayList[N+1];
+        for (int i = 1; i <=N ; i++) {
+            dependencies[i] = new ArrayList<>();
+        }
+        degree=  new int[N+1];
+        for (int i = 2; i <= N; i++) {
+            int child = i;
+            int parent = parents[i];
+            long val = subtreesum[child];
+
+            if (val > 0) {
+                dependencies[child].add(new long[]{parent, val});
+                degree[parent]++;
+            } else if (val < 0) {
+                dependencies[parent].add(new long[]{child, Math.abs(val)});
+                degree[child]++;
+            }
+        }
+        long count = 0;
+        List<long[]> edges = new ArrayList<long[]>();
+        //top sort
+        Queue<Integer> queue = new LinkedList();
+        for (int i = 1; i <=N; i++) {
+            if(degree[i]==0) queue.add(i);
+        }
+        while (!queue.isEmpty()) {
+            int curr = queue.poll();
+            for (long[] nbr : dependencies[curr]) {
+                int dest = (int) nbr[0];
+                long amount = nbr[1];
+                count++;
+                edges.add(new long[]{curr, dest, amount});
+                degree[dest]--;
+                if (degree[dest] == 0) {
+                    queue.add(dest);
+                }
+            }
+        }
+        kattio.println(count);
+        for (long[] a: edges) {
+            kattio.println(a[0] + " " + a[1] + " " + a[2]);
+        }
+        kattio.close();
+    }
+    public static long dfs(long[] delta, int node, int parent){
+       long balance = delta[node];
+       for(int nbr: adj[node]){
+           if (nbr==parent) continue;
+           parents[nbr] = node;
+           long childsum = dfs(delta, nbr, node);
+           balance += childsum;
+       }
+       subtreesum[node]= balance;
+       return balance;
+    }
+    static class Kattio extends PrintWriter {
+        private BufferedReader r;
+        private StringTokenizer st;
+        public Kattio() { this(System.in, System.out); }
+        public Kattio(InputStream i, OutputStream o) {
+            super(o);
+            r = new BufferedReader(new InputStreamReader(i));
+        }
+        public String next() {
+            try {
+                while (st == null || !st.hasMoreTokens()) {
+                    String line = r.readLine();
+                    if (line == null) return null;
+                    st = new StringTokenizer(line);
+                }
+                return st.nextToken();
+            } catch (Exception e) { }
+            return null;
+        }
+        public int nextInt() { return Integer.parseInt(next()); }
+        public long nextLong() { return Long.parseLong(next()); }
+    }
+}
