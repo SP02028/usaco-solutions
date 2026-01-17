@@ -1,0 +1,87 @@
+// TLE
+import java.io.*;
+import java.util.Arrays;
+import java.util.StringTokenizer;
+
+public class FD {
+    static int[][] grid;// r = -1, d = -2, anything else is a vat that has a cost
+    static boolean[][] visited;
+    static int ans = 0;
+    public static void main(String[] args) {
+        Kattio kattio =new Kattio();
+        int N = kattio.nextInt();
+        grid = new int[N+1][N+1];
+        visited= new boolean[N+1][N+1];
+        for (int i = 0; i < N; i++) {
+            String string =  kattio.next();
+            for (int j = 0; j < N; j++) {
+                if(string.charAt(j)=='R') grid[i][j] =-1;
+                if(string.charAt(j)=='D' ) grid[i][j] = -2;
+            }
+            grid[i][N] = kattio.nextInt();
+        }
+        for (int i = 0; i < N; i++) {
+            grid[N][i] = kattio.nextInt();
+        }
+        //must convert queries to 0 indexed cause grid is 0 indexed
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+
+                floodfill(i,j);
+            }
+        }
+        kattio.println(ans);
+        int Q = kattio.nextInt();
+        for (int k = 0; k < Q; k++) {
+            int a= kattio.nextInt()-1;
+            int b = kattio.nextInt()-1;
+            if(grid[a][b] ==-1) grid[a][b] = -2;
+            else grid[a][b] = -1;
+            ans = 0;
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+
+                    floodfill(i,j);
+                }
+            }
+            kattio.println(ans);
+        }
+        kattio.close();
+    }
+    static void floodfill(int r, int c){
+        if(r>grid.length || c>grid.length ||r<0 || c<0 ) return; //oob
+        if(grid[r][c] !=-1 && grid[r][c]!=-2) {
+            ans += grid[r][c];
+            return;
+        }
+        visited[r][c] = true;
+        if(grid[r][c] == -1){
+            floodfill(r, c+1);
+        }
+        if(grid[r][c] == -2){
+            floodfill(r+1,c);
+        }
+    }
+    static class Kattio extends PrintWriter {
+        private BufferedReader r;
+        private StringTokenizer st;
+        public Kattio() { this(System.in, System.out); }
+        public Kattio(InputStream i, OutputStream o) {
+            super(o);
+            r = new BufferedReader(new InputStreamReader(i));
+        }
+        public String next() {
+            try {
+                while (st == null || !st.hasMoreTokens()) {
+                    String line = r.readLine();
+                    if (line == null) return null;
+                    st = new StringTokenizer(line);
+                }
+                return st.nextToken();
+            } catch (Exception e) { }
+            return null;
+        }
+        public int nextInt() { return Integer.parseInt(next()); }
+        public long nextLong() { return Long.parseLong(next()); }
+    }
+}
