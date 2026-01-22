@@ -1,0 +1,60 @@
+import java.util.*;
+import java.io.*;
+public class A2 {
+    public static void main(String[] args) {
+        Kattio kattio =new Kattio();
+        int N = kattio.nextInt();
+        int K = kattio.nextInt();
+        int L = kattio.nextInt();
+        Integer[] arr = new Integer[N];
+        for (int i = 0; i < N; i++) {
+            arr[i] = kattio.nextInt();
+        }
+        Arrays.sort(arr, Comparator.reverseOrder());
+        //int[] pref=new int[N+1];
+        //for (int i = 1; i <= N; i++) {
+        //    pref[i] = arr[i] + pref[i-1];
+        //}
+        //fyi to self all arrays are 1 indexed
+        //binary search for h time!!!!
+        int lo = 0;
+        int hi = N;
+        while(lo<hi){
+            int h = (lo+hi+1)/2;
+            long n = 0;
+            for (int i = 0; i <h; i++) {
+                n += (long) Math.max(0, h-arr[i]);
+            }
+            if(n<= (long) K*(long) L && arr[h-1] + K >=h){
+                lo = h;
+            }else{
+                hi = h-1;
+            }
+        }
+        kattio.println(hi);
+        kattio.close();
+    }
+    static class Kattio extends
+            PrintWriter {
+        private BufferedReader r;
+        private StringTokenizer st;
+        public Kattio() { this(System.in, System.out); }
+        public Kattio(InputStream i, OutputStream o) {
+            super(o);
+            r = new BufferedReader(new InputStreamReader(i));
+        }
+        public String next() {
+            try {
+                while (st == null || !st.hasMoreTokens()) {
+                    String line = r.readLine();
+                    if (line == null) return null;
+                    st = new StringTokenizer(line);
+                }
+                return st.nextToken();
+            } catch (Exception e) { }
+            return null;
+        }
+        public int nextInt() { return Integer.parseInt(next()); }
+        public long nextLong() { return Long.parseLong(next()); }
+    }
+}
