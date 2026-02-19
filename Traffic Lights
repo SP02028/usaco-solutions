@@ -1,0 +1,70 @@
+import java.util.*;
+import java.io.*;
+//TLEs due to java (equivalent of the correct cpp code)
+public class Main {
+    static TreeMap<Integer, Integer> dist = new TreeMap<>();
+
+    static void msAdd(int val) {
+        dist.merge(val, 1, Integer::sum);
+    }
+
+    static void msRemove(int val) {
+        int cnt = dist.get(val);
+        if (cnt == 1) dist.remove(val);
+        else dist.put(val, cnt - 1);
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        Kattio io = new Kattio();
+
+        int streetLen = io.nextInt();
+        int lightNum  = io.nextInt();
+
+        TreeSet<Integer> lights = new TreeSet<>();
+        lights.add(0);
+        lights.add(streetLen);
+        msAdd(streetLen);
+        for (int l = 0; l < lightNum; l++) {
+            int pos = io.nextInt();
+
+            int hi = lights.higher(pos);  
+            int lo = lights.lower(pos);    
+
+            msRemove(hi - lo);
+            msAdd(pos - lo);
+            msAdd(hi - pos);
+            lights.add(pos);
+
+            io.print(dist.lastKey() + " ");
+        }
+    io.close();
+    }
+static class Kattio extends PrintWriter {
+
+		private BufferedReader r;
+		private StringTokenizer st;
+
+		public Kattio() {
+            this(System.in, System.out);
+        }
+
+		public Kattio(InputStream i, OutputStream o) {
+			super(o);
+			r = new BufferedReader(new InputStreamReader(i));
+		}
+
+		public String next() {
+			try {
+				while (st == null || !st.hasMoreTokens())
+					st = new StringTokenizer(r.readLine());
+				return st.nextToken();
+			} catch (Exception e) {}
+			return null;
+		}
+
+		public int nextInt() {
+            return Integer.parseInt(next());
+        }
+	}
+}
