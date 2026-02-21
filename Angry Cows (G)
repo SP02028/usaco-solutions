@@ -1,0 +1,107 @@
+import java.util.*;
+import java.io.*;
+public class AC {
+
+    public static void main(String[] args) throws IOException{
+        Kattio io = new Kattio();
+        int n=io.nextInt();
+        int[] arr = new int[n];
+        for(int i =0 ; i < n;i++) {
+            arr[i] = io.nextInt() * 2;
+        }
+        Arrays.sort(arr);
+        int low = 0;
+        int high = Integer.MAX_VALUE;
+        while(low <= high) {
+            int mid = low + (high-low)/2;
+            if(canExplode(arr, mid)) {
+                high = mid - 1;
+            }
+            else {
+                low = mid + 1;
+            }
+        }
+        io.printf("%.1f\n", low / 2.0);
+        io.close();
+    }
+    
+    public static boolean canExplode(int[] arr, int power) {
+        int n = arr.length;
+        int poslo = 0;
+        int poshi = Integer.MAX_VALUE;
+        
+        while(poslo <= poshi) {
+            int pos = poslo + (poshi - poslo) / 2;
+            int idx = Arrays.binarySearch(arr, pos);
+            if(idx < 0) idx = -idx - 1;
+            if(idx < n && canExplodeLeft(arr, pos, idx, power)) {
+                poslo = pos + 1;
+            } else {
+                poshi = pos - 1;
+            }
+        }
+        int idx = Arrays.binarySearch(arr, poslo);
+        if(idx < 0) {
+            idx = -idx - 1;
+        } else {
+            while(idx < n && arr[idx] == poslo) idx++;
+        }
+        return canExplodeRight(arr, poslo, idx, power);
+    }
+    
+    static boolean canExplodeLeft(int[] arr, int pos, int idx, int power) {
+        if(idx <= 0) {
+            return idx < 0 || pos - power <= arr[idx];
+        }
+        if(pos - power <= arr[0]) return true;
+        int next = idx;
+        while(next >= 0 && pos - power <= arr[next]) {
+            next--;
+        }
+        if(next == idx) return false;
+        return canExplodeLeft(arr, arr[next + 1], next, power - 2);
+    }
+    
+    static boolean canExplodeRight(int[] arr, int pos, int idx, int power) {
+        int n = arr.length;
+        if(idx >= n - 1) {
+            return idx >= n || pos + power >= arr[idx];
+        }
+        if(pos + power >= arr[n - 1]) return true;
+        int next = idx;
+        while(next < n && arr[next] <= pos + power) {
+            next++;
+        }
+        if(next == idx) return false;
+        return canExplodeRight(arr, arr[next - 1], next, power - 2);
+    }
+    
+    static class Kattio extends PrintWriter {
+        private BufferedReader r;
+        private StringTokenizer st;
+
+        public Kattio() { this(System.in, System.out); }
+        public Kattio(InputStream i, OutputStream o) {
+            super(o);
+            r = new BufferedReader(new InputStreamReader(i));
+        }
+
+        public Kattio(String problemName) throws IOException {
+            super(problemName + ".out");
+            r = new BufferedReader(new FileReader(problemName + ".in"));
+        }
+
+        public String next() {
+            try {
+                while (st == null || !st.hasMoreTokens())
+                    st = new StringTokenizer(r.readLine());
+                return st.nextToken();
+            } catch (Exception e) { }
+            return null;
+        }
+
+        public int nextInt() { return Integer.parseInt(next()); }
+        public double nextDouble() { return Double.parseDouble(next()); }
+        public long nextLong() { return Long.parseLong(next()); }
+    }
+}
