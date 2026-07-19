@@ -1,42 +1,69 @@
 import java.util.*;
 import java.io.*;
-
 public class SSS {
-    public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new FileReader("div7.in"));
-        PrintWriter pw = new PrintWriter("div7.out");
-    	//BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
-    	//PrintWriter pw =new PrintWriter(System.out);
-        int len = Integer.parseInt(br.readLine());
-        long[] arr = new long[len + 1];
-
-        for (int i = 1; i <= len; i++) {
-            arr[i] = Long.parseLong(br.readLine());
+    public static void main(String[] args) throws IOException{
+        Kattio io = new Kattio();
+        int N = io.nextInt();
+        long[] pref = new long[N+1];
+        int[] a = new int[N+1];
+        for(int i =1;i<N;i++){
+            a[i] = io.nextInt();
         }
-        long[] prefixes = prefixSum(arr);
-        int maxlen = 0;
-        Map<Long, Integer> map = new HashMap<>();
-        for (int i = 0; i <= len; i++) {
-            long val = prefixes[i] % 7;
-            if (!map.containsKey(val)) {
-                map.put(val, i);
-            } else {
-                maxlen = Math.max(maxlen, i - map.get(val));
+        a[0]=-1;
+        pref[0]=-1;
+        for(int i = 1; i <N;i++){
+            pref[i] = a[i] + pref[i-1];
+        }
+        Map<Long, ArrayList<Integer>> freq = new HashMap<>();
+        for(int i=1;i<=N;i++){
+            pref[i] = pref[i]%7;
+            if(freq.containsKey(pref[i])){
+                freq.get(pref[i]).add(i);
+            }
+            else{
+                freq.put(pref[i], new ArrayList<Integer>());
+                freq.get(pref[i]).add(i);
             }
         }
-        pw.println(maxlen);
-        pw.close();
-    }
-    public static long[] prefixSum(long[] arr) {
-        int n = arr.length;
-        long[] pref = new long[n];
-        if (n > 0) {
-            pref[0] = arr[0];
-            for (int i = 1; i < n; i++) {
-                pref[i] = pref[i - 1] + arr[i];
-            }
+       // for(long p:pref){
+       //     System.out.print(p + " ");
+       // }
+        System.out.println();
+        //find the two indices with biggest gap
+        int max= -1;
+        for(ArrayList<Integer> arr: freq.values()){
+            int size= arr.size();
+            int diff = arr.get(size-1) - arr.get(0);
+            max = Math.max(max, diff);
         }
-        return pref;
+        io.println(max);
+        io.close();
     }
+    		static class Kattio extends PrintWriter {
+		private BufferedReader r;
+		private StringTokenizer st;
+		// standard input
+		public Kattio() { this(System.in, System.out); }
+		public Kattio(InputStream i, OutputStream o) {
+			super(o);
+			r = new BufferedReader(new InputStreamReader(i));
+		}
+		// USACO-style file input
+		public Kattio(String problemName) throws IOException {
+			super(problemName + ".out");
+			r = new BufferedReader(new FileReader(problemName + ".in"));
+		}
+		// returns null if no more input
+		public String next() {
+			try {
+				while (st == null || !st.hasMoreTokens())
+					st = new StringTokenizer(r.readLine());
+				return st.nextToken();
+			} catch (Exception e) { }
+			return null;
+		}
+		public int nextInt() { return Integer.parseInt(next()); }
+		public double nextDouble() { return Double.parseDouble(next()); }
+		public long nextLong() { return Long.parseLong(next()); }
+	}
 }
-
