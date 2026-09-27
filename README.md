@@ -8,8 +8,8 @@ explains the approach and its complexity, and says how the solution was verified
 
 | Source | Problems |
 | --- | ---: |
-| USACO Bronze | 83 |
-| USACO Silver | 83 |
+| USACO Bronze | 75 |
+| USACO Silver | 91 |
 | USACO Gold | 3 |
 | Codeforces | 209 |
 | CSES | 23 |
@@ -42,7 +42,7 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 
 ## Problem index
 
-### USACO Bronze (83)
+### USACO Bronze (75)
 
 | Problem | Source | Verified | Topics |
 | --- | --- | :---: | --- |
@@ -68,16 +68,12 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Do You Know Your ABCs?](Do%20you%20know%20your%20ABCS/) | [USACO 2020 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1059) | ✅ | Sorting, Math |
 | [Drought](Drought/) | [USACO 2022 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1181) | ✅ | Greedy, Simulation |
 | [Even More Odd Photos](Even%20More%20Odd%20Commercials/) | [USACO 2021 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1084) | ✅ | Greedy, Parity |
-| [Fair Photography](Fair%20Photography/) | [USACO 2014 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=431) | ✅ | Prefix Sums, Hashing, Sorting |
 | [Farmer John Actually Farms](Farmer%20John%20Actually%20Farms/) | [USACO 2023 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1349) | ✅ | Sorting, Inequalities, Math |
 | [Farmer John's Cheese Block](Farmer%20John%27s%20Cheese%20Block/) | [USACO 2024 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1444) | ✅ | Counting, Simulation |
 | [Farmer John's Cheese Block](Farmer%20Johns%20Cheese%20Block/) | [USACO 2024 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1444) | ✅ | Counting, Simulation |
 | [FEB](FEB/) | [USACO 2023 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1323) | ✅ | Case Analysis, Parity, Strings |
 | [Feeding the Cows](Feeding%20the%20cows/) | [USACO 2022 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1252) | ✅ | Greedy |
 | [Field Reduction](Field%20Reduction/) | [USACO 2016 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=641) | ✅ | Geometry, Greedy |
-| [Goldilocks and the N Cows](Plant%20Growth/) | [USACO 2013 November Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=341) | ✅ | Sorting, Binary Search, Candidate Points |
-| [Haybale Stacking](Haybale%20Stacking/) | [USACO 2012 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=104) | ✅ | Difference Arrays, Sorting |
-| [Haybale Stacking](RoboCow%20and%20StackTask/) | [USACO 2012 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=104) | ✅ | Difference Arrays, Sorting |
 | [Herdle](Herdle/) | [USACO 2022 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1179) | ✅ | Simulation, Counting |
 | [Hoof Paper Scissors Minus One](Hoof%20Paper%20Scissors%20Minus%201/) | [USACO 2025 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1515) | ✅ | Counting, Complement Counting |
 | [Hoofball](Hoofball/) | [USACO 2018 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=808) | ✅ | Simulation, Functional Graphs |
@@ -86,7 +82,6 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [It's Mooin' Time II](Its%20Mooin%20Time%202/) | [USACO 2025 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1468) | ✅ | Counting, Prefix Distinct Values |
 | [Just Stalling](Just%20Stalling/) | [USACO 2021 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1085) | ✅ | Combinatorics, Sorting, Two Pointers |
 | [Leaders](Leaders/) | [USACO 2023 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1275) | ✅ | Case Analysis, Greedy |
-| [Learning by Example](Learning%20By%20Example/) | [USACO 2014 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=490) | ✅ | Sorting, Intervals, Math |
 | [Load Balancing](Load%20Balancing/) | [USACO 2016 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=617) | ✅ | Complete Search |
 | [Logical Moos](Logical%20Moos/) | [USACO 2024 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1419) | ✅ | Prefix Computation, Expression Evaluation |
 | [Lonely Photo](Lonely%20Cow/) | [USACO 2021 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1155) | ✅ | Counting, Two Pointers |
@@ -110,7 +105,6 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Reverse Engineering](Reverse%20Engineering/) | [USACO 2022 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1253) | ✅ | Greedy, Simulation |
 | [Rotate and Shift](Rotate%20and%20Shift/) | [USACO 2023 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1325) | ✅ | Modular Arithmetic, Simulation |
 | [Roundabout Rounding](Roundabout%20Rounding2/) | [USACO 2024 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1443) | ✅ | Math, Digits |
-| [Scrambled Letters](Mixed%20Up%20Names/) | [USACO 2012 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=206) | ✅ | Sorting, Binary Search, Strings |
 | [Sleeping in Class](Sleeping%20In%20Class/) | [USACO 2022 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1203) | ✅ | Divisors, Greedy |
 | [Sleepy Cow Sorting](Sleepy%20Cow%20Sorting/) | [USACO 2019 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=892) | ✅ | Greedy, Observation |
 | [Social Distancing I](Social%20Distancing%201/) | [USACO 2020 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1035) | ✅ | Binary Search on Answer, Greedy |
@@ -120,7 +114,6 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Stuck in a Rut](Str2/) | [USACO 2020 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1061) | ✅ | Simulation, Sorting |
 | [Swapity Swap](Swapity%20Swap/) | [USACO 2020 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1013) | ✅ | Simulation, Cycle Detection |
 | [Taming the Herd](Taming%20The%20Herd/) | [USACO 2018 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=809) | ✅ | Simulation, Constraint Propagation |
-| [Typo](Acron%20Bracelet/) | [USACO 2012 November Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=188) | ✅ | Bracket Sequences, Prefix Balance |
 | [Uddered but not Herd](Uddered%20but%20not%20Herd/) | [USACO 2021 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1083) | ✅ | Greedy, Strings |
 | [Walking Along a Fence](Walking%20Along%20a%20Fence/) | [USACO 2024 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1420) | ✅ | Simulation, Prefix Distances |
 | [Walking Home](Walking%20Home/) | [USACO 2021 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1157) | ✅ | Complete Search, Case Analysis |
@@ -128,9 +121,8 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Why Did the Cow Cross the Road](Why%20Did%20the%20Cow%20Cross%20the%20Road/) | [USACO 2017 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=711) | ✅ | Simulation |
 | [Why Did the Cow Cross the Road II](Cow%20Cross%20II/) | [USACO 2017 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=712) | ✅ | Intervals, Brute Force |
 | [Why Did the Cow Cross the Road III](Cow%20Road%20III/) | [USACO 2017 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=713) | ✅ | Sorting, Simulation |
-| [Wormholes](Particle%20Physics/) | [USACO 2013 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=360) | ✅ | Backtracking, Complete Search, Cycle Detection |
 
-### USACO Silver (83)
+### USACO Silver (91)
 
 | Problem | Source | Verified | Topics |
 | --- | --- | :---: | --- |
@@ -162,13 +154,18 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Diamond Collector](Diamond%20Collector/) | [USACO 2016 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=643) | ✅ | Two Pointers, Prefix/Suffix Maximum |
 | [Do You Know Your ABCs?](Do%20You%20Know%20Your%20ABCs%20(Silver)/) | [USACO 2021 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1135) | ✅ | Complete Search, Sets |
 | [Email Filing](Email%20Filing/) | [USACO 2022 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1208) | ✅ | Simulation, Priority Queue, Two Windows |
+| [Fair Photography](Fair%20Photography/) | [USACO 2014 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=431) | ✅ | Prefix Sums, Hashing, Sorting |
 | [Farmer John's Favorite Operation](Farmer%20Johns%20Favorite%20Operation/) | [USACO 2025 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1471) | ✅ | Sweep Line, Piecewise Linear Functions |
 | [Fence Planning](Fence%20Planning/) | [USACO 2019 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=944) | ✅ | Connected Components, DFS |
 | [Find and Replace](Find%20and%20Replace/) | [USACO 2023 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1278) | ✅ | Functional Graphs, Cycle Detection |
+| [Goldilocks and the N Cows](Plant%20Growth/) | [USACO 2013 November Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=341) | ✅ | Sorting, Binary Search, Candidate Points |
 | [Grass Planting](Grass%20Planting/) | [USACO 2019 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=894) | ✅ | Trees, Degree |
+| [Haybale Stacking](Haybale%20Stacking/) | [USACO 2012 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=104) | ✅ | Difference Arrays, Sorting |
+| [Haybale Stacking](RoboCow%20and%20StackTask/) | [USACO 2012 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=104) | ✅ | Difference Arrays, Sorting |
 | [High Card Wins](High%20Card%20Wins/) | [USACO 2015 December Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=571) | ✅ | Greedy, Two Pointers, Sorting |
 | [Hoof, Paper, Scissors](Hoof%20Paper%20Scissors%20Silver/) | [USACO 2017 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=691) | ✅ | Prefix Sums |
 | [Icy Perimeter](Icy%20Perimeter/) | [USACO 2019 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=895) | ✅ | Flood Fill, DFS |
+| [Learning by Example](Learning%20By%20Example/) | [USACO 2014 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=490) | ✅ | Sorting, Intervals, Math |
 | [Left Out](Left%20Out/) | [USACO 2019 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=942) | ✅ | Grid, Case Analysis, Invariants |
 | [Lemonade Line](Lemonade%20Line/) | [USACO 2018 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=835) | ✅ | Greedy, Priority Queue |
 | [Lifeguards](Lifeguards/) | [USACO 2018 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=786) | ✅ | Sweep Line, Sorting |
@@ -194,6 +191,7 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Redistributing Gifts](Redistributing%20Gifts/) | [USACO 2022 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1206) | ✅ | Graph Reachability, DFS, Cycles |
 | [Rental Service](Rental%20Service/) | [USACO 2018 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=787) | ✅ | Greedy, Prefix Sums, Sorting |
 | [Robot Instructions](EV%20Tractor/) | [USACO 2022 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1207) | ✅ | Meet in the Middle, Bitmask Enumeration, Hashing |
+| [Scrambled Letters](Mixed%20Up%20Names/) | [USACO 2012 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=206) | ✅ | Sorting, Binary Search, Strings |
 | [Searching for Soulmates](Searching%20for%20Soulmates/) | [USACO 2022 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1182) | ✅ | Recursion, Greedy, Bit Manipulation |
 | [Secret Cow Code](Secret%20Cow%20Code/) | [USACO 2017 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=692) | ✅ | Recursion, Divide and Conquer |
 | [Ski Slope](Ski%20Slope%202/) | [USACO 2025 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1520) | ✅ | DFS, Offline Queries, TreeSet |
@@ -211,11 +209,13 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [The Lazy Cow](TLC3/) | [USACO 2014 March Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=416) | ✅ | Coordinate Rotation, 2D Prefix Sums |
 | [The Lazy Cow](The%20Lazy%20Cow/) | [USACO 2014 March Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=416) | ✅ | Coordinate Rotation, 2D Prefix Sums |
 | [Triangles](Triangles/) | [USACO 2020 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1015) | ✅ | Prefix Sums, Sorting, Counting |
+| [Typo](Acron%20Bracelet/) | [USACO 2012 November Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=188) | ✅ | Bracket Sequences, Prefix Balance |
 | [Visits](Visits/) | [USACO 2022 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1230) | ✅ | Functional Graphs, Cycle Detection |
 | [Where's Bessie?](Spot%20the%20Cow/) | [USACO 2017 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=740) | ✅ | Complete Search, Flood Fill |
 | [Where's Bessie?](Wheres%20Bessie/) | [USACO 2017 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=740) | ✅ | Complete Search, Flood Fill |
 | [Why Did the Cow Cross the Road II](Why%20did%20the%20cow%20cross%20the%20road%20ii%20silver/) | [USACO 2017 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=715) | ✅ | Prefix Sums, Sliding Window |
 | [Wormhole Sort](Wormhole%20Sort/) | [USACO 2020 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=992) | ✅ | Binary Search on Answer, Connected Components |
+| [Wormholes](Particle%20Physics/) | [USACO 2013 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=360) | ✅ | Backtracking, Complete Search, Cycle Detection |
 | [Year of the Cow](Year%20of%20The%20Cow/) | [USACO 2021 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1111) | ✅ | Greedy, Sorting |
 
 ### USACO Gold (3)

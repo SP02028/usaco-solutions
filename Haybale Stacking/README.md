@@ -1,7 +1,7 @@
 # Haybale Stacking
 
 **Source:** [USACO 2012 January Contest, Bronze — Problem 2: Haybale Stacking](https://usaco.org/index.php?page=viewproblem2&cpid=104)  
-**Difficulty:** Bronze  
+**Difficulty:** Silver (this contest predates Platinum, so its Bronze division was Silver-level)  
 **Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem

@@ -1,7 +1,7 @@
 # Scrambled Letters
 
 **Source:** [USACO 2012 December Contest, Bronze — Problem 2: Scrambled Letters](https://usaco.org/index.php?page=viewproblem2&cpid=206)  
-**Difficulty:** Bronze  
+**Difficulty:** Silver (this contest predates Platinum, so its Bronze division was Silver-level)  
 **Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem

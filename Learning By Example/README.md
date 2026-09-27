@@ -1,7 +1,7 @@
 # Learning by Example
 
 **Source:** [USACO 2014 December Contest, Bronze — Problem 4: Learning by Example](https://usaco.org/index.php?page=viewproblem2&cpid=490)  
-**Difficulty:** Bronze  
+**Difficulty:** Silver (this contest predates Platinum, so its Bronze division was Silver-level)  
 **Verified:** ✅ Passes all 13 official USACO test cases, checked with a custom validator because more than one answer is accepted.
 
 ## Problem

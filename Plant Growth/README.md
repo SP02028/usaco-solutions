@@ -1,7 +1,7 @@
 # Goldilocks and the N Cows
 
 **Source:** [USACO 2013 November Contest, Bronze — Problem 2: Goldilocks and the N Cows](https://usaco.org/index.php?page=viewproblem2&cpid=341)  
-**Difficulty:** Bronze  
+**Difficulty:** Silver (this contest predates Platinum, so its Bronze division was Silver-level)  
 **Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem

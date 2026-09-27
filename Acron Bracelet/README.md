@@ -1,7 +1,7 @@
 # Typo
 
 **Source:** [USACO 2012 November Contest, Bronze — Problem 2: Typo](https://usaco.org/index.php?page=viewproblem2&cpid=188)  
-**Difficulty:** Bronze  
+**Difficulty:** Silver (this contest predates Platinum, so its Bronze division was Silver-level)  
 **Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem

@@ -1,7 +1,7 @@
 # Wormholes
 
 **Source:** [USACO 2013 December Contest, Bronze — Problem 3: Wormholes](https://usaco.org/index.php?page=viewproblem2&cpid=360)  
-**Difficulty:** Bronze  
+**Difficulty:** Silver (this contest predates Platinum, so its Bronze division was Silver-level)  
 **Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem

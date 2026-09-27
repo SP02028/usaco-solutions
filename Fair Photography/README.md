@@ -1,7 +1,7 @@
 # Fair Photography
 
 **Source:** [USACO 2014 US Open Contest, Bronze — Problem 2: Fair Photography](https://usaco.org/index.php?page=viewproblem2&cpid=431)  
-**Difficulty:** Bronze  
+**Difficulty:** Silver (this contest predates Platinum, so its Bronze division was Silver-level)  
 **Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
