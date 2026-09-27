@@ -1,0 +1,104 @@
+import java.io.*;
+import java.util.*;
+
+public class R {
+    public static void main(String[] args) {
+        /* Goal: find the maximum number of mirror bounces for any laser shot entering the grid from a border cell. If a path can loop forever, the answer would be -1.
+Method: simulate the laser path from each possible border entry point.
+State to track: row, column, and direction.
+At each step:
+look at the current mirror,
+change direction based on the mirror type,
+move one cell forward,
+count one bounce,
+stop when the beam leaves the grid.
+Important idea: the movement is deterministic, so once position + direction are known, the next move is forced.
+Try all four entry sides: top, bottom, left, and right.
+Keep the largest bounce count seen.
+Key caution: boundary checks must match the grid dimensions correctly, especially for rectangular grids.
+Main lesson: this problem is a simulation/traversal problem with local transitions, not a search problem.*/
+        Kattio kattio = new Kattio();
+        int N = kattio.nextInt();
+        int M = kattio.nextInt();
+        char[][] grid = new char[N][M];
+        for (int i = 0; i < N; i++) {
+            String line = kattio.next();
+            for (int j = 0; j < M; j++) {
+                grid[i][j] = line.charAt(j);
+            }
+        }
+
+        // dirs[0] = sign (+1 / -1), dirs[1] = axis (0 = row/posx, 1 = column/posy)
+        // down = {1,0}, up = {-1,0}, right = {1,1}, left = {-1,1}
+        int maxbounce = 0;
+        // entering from the top edge, moving down
+        for (int j = 0; j < M; j++) {
+            maxbounce = Math.max(maxbounce, trace(grid, 0, j, 1, 0));
+        }
+        // entering from the left edge, moving right
+        for (int i = 0; i < N; i++) {
+            maxbounce = Math.max(maxbounce, trace(grid, i, 0, 1, 1));
+        }
+        // entering from the bottom edge, moving up
+        for (int i = 0; i < M; i++) {
+            maxbounce = Math.max(maxbounce, trace(grid, N-1, i, -1, 0));
+        }
+        // entering from the right edge, moving left
+        for (int i = 0; i < N; i++) {
+            maxbounce = Math.max(maxbounce, trace(grid, i, M-1, -1, 1));
+        }
+        kattio.println(maxbounce);
+        kattio.close();
+    }
+
+    static int trace(char[][] grid, int posx, int posy, int sign, int axis) {
+        int N = grid.length, M = grid[0].length;
+        int[] dirs = {sign, axis};
+        int bounce = 0;
+        while (posx >= 0 && posy >= 0 && posx < N && posy < M) {
+            dirs = changedirs(dirs, grid[posx][posy]);
+            int[] pos = incrementpos(dirs, posx, posy);
+            posx = pos[0];
+            posy = pos[1];
+            bounce++;
+        }
+        return bounce;
+    }
+
+    static int[] incrementpos(int[] dirs, int posx, int posy) {
+        if (dirs[1] == 0) {
+            posx += dirs[0];
+        } else {
+            posy += dirs[0];
+        }
+        return new int[] {posx, posy};
+    }
+
+    static int[] changedirs(int[] dirs, char c) {
+        dirs[1] = 1 - dirs[1];            // both mirrors swap axis
+        if (c == '/') dirs[0] = -dirs[0]; // only '/' flips sign
+        return dirs;
+    }
+
+    static class Kattio extends PrintWriter {
+        private BufferedReader r;
+        private StringTokenizer st;
+        public Kattio() { this(System.in, System.out); }
+        public Kattio(InputStream i, OutputStream o) {
+            super(o);
+            this.r = new BufferedReader(new InputStreamReader(i));
+        }
+        public String next() {
+            try {
+                while (st == null || !st.hasMoreTokens()) {
+                    String line = r.readLine();
+                    if (line == null) return null;
+                    st = new StringTokenizer(line);
+                }
+                return st.nextToken();
+            } catch (Exception e) { return null; }
+        }
+        public int nextInt() { return Integer.parseInt(next()); }
+        public long nextLong() { return Long.parseLong(next()); }
+    }
+}
