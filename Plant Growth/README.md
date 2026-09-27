@@ -1,7 +1,8 @@
-# Plant Growth
+# Goldilocks and the N Cows
 
-**Source:** Not publicly listed (practice / course problem)  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2013 November Contest, Bronze — Problem 2: Goldilocks and the N Cows](https://usaco.org/index.php?page=viewproblem2&cpid=341)  
+**Difficulty:** Bronze  
+**Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
 
@@ -24,3 +25,7 @@ Sorting, Binary Search, Candidate Points
 ## Files
 
 - [`src/PG.java`](src/PG.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2013 November Bronze "Goldilocks and the N Cows"; the folder keeps the AlphaStar title.

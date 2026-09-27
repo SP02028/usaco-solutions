@@ -1,7 +1,8 @@
-# Mixed Up Names
+# Scrambled Letters
 
-**Source:** Not publicly listed (practice / course problem)  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2012 December Contest, Bronze — Problem 2: Scrambled Letters](https://usaco.org/index.php?page=viewproblem2&cpid=206)  
+**Difficulty:** Bronze  
+**Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
 
@@ -24,3 +25,7 @@ Sorting, Binary Search, Strings
 ## Files
 
 - [`src/MUN.java`](src/MUN.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2012 December Bronze "Scrambled Letters"; the folder keeps the AlphaStar title.

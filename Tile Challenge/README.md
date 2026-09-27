@@ -1,7 +1,8 @@
-# Tile Challenge
+# Square Overlap
 
-**Source:** Not publicly listed (practice / course problem)  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2013 January Contest, Silver — Problem 2: Square Overlap](https://usaco.org/index.php?page=viewproblem2&cpid=227)  
+**Difficulty:** Silver  
+**Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
 
@@ -24,3 +25,7 @@ Sweep Line, TreeSet, Geometry
 ## Files
 
 - [`src/TC.java`](src/TC.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2013 January Silver "Square Overlap"; the folder keeps the AlphaStar title.

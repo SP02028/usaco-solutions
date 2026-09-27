@@ -8,16 +8,16 @@ explains the approach and its complexity, and says how the solution was verified
 
 | Source | Problems |
 | --- | ---: |
-| USACO Bronze | 77 |
-| USACO Silver | 80 |
+| USACO Bronze | 83 |
+| USACO Silver | 83 |
 | USACO Gold | 3 |
 | Codeforces | 209 |
 | CSES | 23 |
 | Other judges | 13 |
-| Practice & unlisted | 22 |
+| Practice & unlisted | 13 |
 | **Total** | **427** |
 
-**368 of 427** folders contain only solutions that pass the problem's official tests (or its statement samples, for the newest Codeforces problems).
+**377 of 427** folders contain only solutions that pass the problem's official tests (or its statement samples, for the newest Codeforces problems).
 The rest are for judges that don't publish test data (CSES, LeetCode, AtCoder, JOI, …), interactive problems, or practice problems that aren't publicly listed.
 
 ## Verification
@@ -42,7 +42,7 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 
 ## Problem index
 
-### USACO Bronze (77)
+### USACO Bronze (83)
 
 | Problem | Source | Verified | Topics |
 | --- | --- | :---: | --- |
@@ -75,6 +75,9 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [FEB](FEB/) | [USACO 2023 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1323) | ✅ | Case Analysis, Parity, Strings |
 | [Feeding the Cows](Feeding%20the%20cows/) | [USACO 2022 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1252) | ✅ | Greedy |
 | [Field Reduction](Field%20Reduction/) | [USACO 2016 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=641) | ✅ | Geometry, Greedy |
+| [Goldilocks and the N Cows](Plant%20Growth/) | [USACO 2013 November Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=341) | ✅ | Sorting, Binary Search, Candidate Points |
+| [Haybale Stacking](Haybale%20Stacking/) | [USACO 2012 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=104) | ✅ | Difference Arrays, Sorting |
+| [Haybale Stacking](RoboCow%20and%20StackTask/) | [USACO 2012 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=104) | ✅ | Difference Arrays, Sorting |
 | [Herdle](Herdle/) | [USACO 2022 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1179) | ✅ | Simulation, Counting |
 | [Hoof Paper Scissors Minus One](Hoof%20Paper%20Scissors%20Minus%201/) | [USACO 2025 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1515) | ✅ | Counting, Complement Counting |
 | [Hoofball](Hoofball/) | [USACO 2018 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=808) | ✅ | Simulation, Functional Graphs |
@@ -107,6 +110,7 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Reverse Engineering](Reverse%20Engineering/) | [USACO 2022 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1253) | ✅ | Greedy, Simulation |
 | [Rotate and Shift](Rotate%20and%20Shift/) | [USACO 2023 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1325) | ✅ | Modular Arithmetic, Simulation |
 | [Roundabout Rounding](Roundabout%20Rounding2/) | [USACO 2024 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1443) | ✅ | Math, Digits |
+| [Scrambled Letters](Mixed%20Up%20Names/) | [USACO 2012 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=206) | ✅ | Sorting, Binary Search, Strings |
 | [Sleeping in Class](Sleeping%20In%20Class/) | [USACO 2022 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1203) | ✅ | Divisors, Greedy |
 | [Sleepy Cow Sorting](Sleepy%20Cow%20Sorting/) | [USACO 2019 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=892) | ✅ | Greedy, Observation |
 | [Social Distancing I](Social%20Distancing%201/) | [USACO 2020 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1035) | ✅ | Binary Search on Answer, Greedy |
@@ -116,6 +120,7 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Stuck in a Rut](Str2/) | [USACO 2020 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1061) | ✅ | Simulation, Sorting |
 | [Swapity Swap](Swapity%20Swap/) | [USACO 2020 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1013) | ✅ | Simulation, Cycle Detection |
 | [Taming the Herd](Taming%20The%20Herd/) | [USACO 2018 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=809) | ✅ | Simulation, Constraint Propagation |
+| [Typo](Acron%20Bracelet/) | [USACO 2012 November Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=188) | ✅ | Bracket Sequences, Prefix Balance |
 | [Uddered but not Herd](Uddered%20but%20not%20Herd/) | [USACO 2021 January Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1083) | ✅ | Greedy, Strings |
 | [Walking Along a Fence](Walking%20Along%20a%20Fence/) | [USACO 2024 US Open Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1420) | ✅ | Simulation, Prefix Distances |
 | [Walking Home](Walking%20Home/) | [USACO 2021 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=1157) | ✅ | Complete Search, Case Analysis |
@@ -123,8 +128,9 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Why Did the Cow Cross the Road](Why%20Did%20the%20Cow%20Cross%20the%20Road/) | [USACO 2017 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=711) | ✅ | Simulation |
 | [Why Did the Cow Cross the Road II](Cow%20Cross%20II/) | [USACO 2017 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=712) | ✅ | Intervals, Brute Force |
 | [Why Did the Cow Cross the Road III](Cow%20Road%20III/) | [USACO 2017 February Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=713) | ✅ | Sorting, Simulation |
+| [Wormholes](Particle%20Physics/) | [USACO 2013 December Contest, Bronze](https://usaco.org/index.php?page=viewproblem2&cpid=360) | ✅ | Backtracking, Complete Search, Cycle Detection |
 
-### USACO Silver (80)
+### USACO Silver (83)
 
 | Problem | Source | Verified | Topics |
 | --- | --- | :---: | --- |
@@ -181,16 +187,19 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Multiplayer Moo](Multiplayer%20Moo/) | [USACO 2018 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=836) | ✅ | Flood Fill, BFS, Pruning |
 | [Out of Sorts](Out%20of%20Sorts/) | [USACO 2018 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=834) | ✅ | Sorting, Bubble Sort Analysis |
 | [Painting the Barn](Painting%20the%20Barn/) | [USACO 2019 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=919) | ✅ | 2D Difference Arrays, Prefix Sums |
+| [Painting the Fence](Pencil%20Shades/) | [USACO 2013 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=226) | ✅ | Sweep Line, Difference Array on a TreeMap |
 | [Paired Up](Paired%20Up/) | [USACO 2017 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=738) | ✅ | Greedy, Two Pointers, Sorting |
 | [Range Reconstruction](RR/) | [USACO 2022 December Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1256) | ✅ | Constructive, Verification |
 | [Rectangular Pasture](Rectangular%20Pasture/) | [USACO 2020 December Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1063) | ✅ | 2D Prefix Sums, Coordinate Compression, Counting |
 | [Redistributing Gifts](Redistributing%20Gifts/) | [USACO 2022 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1206) | ✅ | Graph Reachability, DFS, Cycles |
 | [Rental Service](Rental%20Service/) | [USACO 2018 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=787) | ✅ | Greedy, Prefix Sums, Sorting |
+| [Robot Instructions](EV%20Tractor/) | [USACO 2022 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1207) | ✅ | Meet in the Middle, Bitmask Enumeration, Hashing |
 | [Searching for Soulmates](Searching%20for%20Soulmates/) | [USACO 2022 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1182) | ✅ | Recursion, Greedy, Bit Manipulation |
 | [Secret Cow Code](Secret%20Cow%20Code/) | [USACO 2017 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=692) | ✅ | Recursion, Divide and Conquer |
 | [Ski Slope](Ski%20Slope%202/) | [USACO 2025 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1520) | ✅ | DFS, Offline Queries, TreeSet |
 | [Sleepy Cow Herding](Sleepy%20Cow%20Herding/) | [USACO 2019 February Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=918) | ✅ | Sliding Window, Case Analysis |
 | [Social Distancing](Social%20Distancing/) | [USACO 2020 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1038) | ✅ | Binary Search on Answer, Greedy |
+| [Square Overlap](Tile%20Challenge/) | [USACO 2013 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=227) | ✅ | Sweep Line, TreeSet, Geometry |
 | [Stuck in a Rut](Stuck%20in%20a%20Rut/) | [USACO 2020 December Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1064) | ✅ | Simulation, Sorting |
 | [Subsequences Summing to Sevens](Subsequences%20Summing%20to%20Sevens/) | [USACO 2016 January Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=595) | ✅ | Prefix Sums, Modular Arithmetic |
 | [Subset Equality](Subset%20Equality/) | [USACO 2022 US Open Contest, Silver](https://usaco.org/index.php?page=viewproblem2&cpid=1231) | ✅ | Two Pointers, Strings |
@@ -465,11 +474,11 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | --- | --- | :---: | --- |
 | [A Huge Tower](A%20Huge%20Tower/) | [CEOI 2010](https://oj.uz/problem/view/CEOI10_tower) | ⚪ | Sorting, Two Pointers, Combinatorics |
 | [Art Exhibition](Art%20Exhibition/) | [JOI 2018 Final Round (Japanese Olympiad in Informatics)](https://oj.uz/problem/view/JOI18_art) | ⚪ | Sorting, Two Pointers |
+| [Barnscape Outline](Barnscape%20Outline/) | [USACO 2005 November Contest, Silver](http://poj.org/problem?id=3044) | ⚪ | Monotonic Stack, Greedy |
 | [Count Descendants](Count%20Descendants/) | [AtCoder ABC202 E](https://atcoder.jp/contests/abc202/tasks/abc202_e) | ⚪ | Euler Tour, Binary Search, Trees |
 | [Find Center of Star Graph](Find%20Center%20of%20Star%20Graph/) | [LeetCode 1791](https://leetcode.com/problems/find-center-of-star-graph/) | ⚪ | Graphs, Degree Counting |
 | [GCD on a Blackboard](GCD%20on%20a%20Blackboard/) | [AtCoder ABC125 C](https://atcoder.jp/contests/abc125/tasks/abc125_c) | ⚪ | Prefix/Suffix GCD |
 | [Growing Vegetables is Fun](Growing%20Vegetables%20is%20Fun/) | [JOI 2021 Final Round (Japanese Olympiad in Informatics), Problem 1](https://oj.uz/problem/view/JOI21_ho_t1) | ⚪ | Prefix Sums, Greedy |
-| [Haybale Stacking](Haybale%20Stacking/) | [SPOJ](https://www.spoj.com/problems/HAYBALE/) | ⚪ | Difference Arrays, Sorting |
 | [Map of Sweeden](Map%20of%20Sweeden/) | [Kattis](https://open.kattis.com/problems/sverigekartan) | ⚪ | Flood Fill, Incremental Connectivity |
 | [Maximal Network Rank](Maximal%20Network%20Rank/) | [LeetCode 1615](https://leetcode.com/problems/maximal-network-rank/) | ⚪ | Graphs, Degree Counting |
 | [Minimize the Diameter](Minimize%20the%20Diameter/) | [Codeforces Gym 104536, problem F](https://codeforces.com/gym/104536/problem/F) | ⚪ | Tree Diameter, DFS |
@@ -477,30 +486,21 @@ A few solutions use `List.getFirst()` or `Math.ceilDiv()`, so compile with **Jav
 | [Studying Algorithms](Studying%20Algorithms/) | [Codeforces Gym 102951, problem B](https://codeforces.com/gym/102951/problem/B) | ⚪ | Greedy, Sorting |
 | [Twenty Four](Twenty%20Four/) | [Canadian Computing Competition 2008 Senior, Problem 4 (Twenty Four)](https://dmoj.ca/problem/ccc08s4) | ⚪ | Complete Search, Recursion, Permutations |
 
-### Practice & unlisted (22)
+### Practice & unlisted (13)
 
 | Problem | Source | Verified | Topics |
 | --- | --- | :---: | --- |
 | [3D Acorn Counting](3D%20Acorn%20Counting/) | Not publicly listed (practice / course problem) | ⚪ | Flood Fill, BFS, 3D Grid |
-| [Acron Bracelet](Acron%20Bracelet/) | Not publicly listed (practice / course problem) | ⚪ | Bracket Sequences, Prefix Balance |
-| [Barnscape Outline](Barnscape%20Outline/) | Not publicly listed (practice / course problem) | ⚪ | Monotonic Stack, Greedy |
 | [BFS](BFS/) | Practice program (not a judge problem) | ⚪ | BFS |
 | [BFS Shortest Path](BFS%20Shortest%20Path/) | Practice program (not a judge problem) | ⚪ | BFS, Shortest Path |
 | [DFS code](DFS%20code/) | Practice program (not a judge problem) | ⚪ | DFS |
 | [Dividing the Pasture](Dividing%20the%20Pasture/) | Not publicly listed (practice / course problem) | ⚪ | Geometry, Hashing |
-| [EV Tractor](EV%20Tractor/) | Not publicly listed (practice / course problem) | ⚪ | Meet in the Middle, Bitmask Enumeration, Hashing |
 | [Fixing the Roads](Fixing%20the%20Roads/) | Not publicly listed (practice / course problem) | ⚪ | 0-1 BFS, Shortest Paths |
 | [hellow](hellow/) | Practice program (not a judge problem) | ⚪ | Brute Force |
 | [Max Binary Tree Width](Max%20Binary%20Tree%20Width/) | Not publicly listed (practice / course problem) | ⚪ | Binary Search on Answer |
-| [Mixed Up Names](Mixed%20Up%20Names/) | Not publicly listed (practice / course problem) | ⚪ | Sorting, Binary Search, Strings |
-| [Particle Physics](Particle%20Physics/) | Not publicly listed (practice / course problem) | ⚪ | Backtracking, Complete Search, Cycle Detection |
-| [Pencil Shades](Pencil%20Shades/) | Not publicly listed (practice / course problem) | ⚪ | Sweep Line, Difference Array on a TreeMap |
-| [Plant Growth](Plant%20Growth/) | Not publicly listed (practice / course problem) | ⚪ | Sorting, Binary Search, Candidate Points |
-| [RoboCow and StackTask](RoboCow%20and%20StackTask/) | Not publicly listed; the same task as the classic "Haybale Stacking" problem | ⚪ | Difference Arrays, Sorting |
 | [Squares](Squares/) | Not publicly listed (practice / course problem) | ⚪ | Monotonic Stack, MEX |
 | [Sure Bet](Sure%20Bet/) | Not publicly listed (practice / course problem) | ⚪ | Greedy, Two Pointers, Sorting |
 | [Sweep Line 1](Sweep%20Line%201/) | Not publicly listed (practice / course problem) | ⚪ | Sweep Line, Sorting |
-| [Tile Challenge](Tile%20Challenge/) | Not publicly listed (practice / course problem) | ⚪ | Sweep Line, TreeSet, Geometry |
 | [Triangular Barns 1](Triangular%20Barns%201/) | Not publicly listed (practice / course problem) | ⚪ | Interval Merging, Sorting |
 | [Trolley Problem](Trolley%20Problem/) | Not publicly listed (practice / course problem) | ⚪ | Greedy, Sorting, Two Pointers |
 

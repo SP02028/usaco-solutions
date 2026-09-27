@@ -1,7 +1,8 @@
-# RoboCow and StackTask
+# Haybale Stacking
 
-**Source:** Not publicly listed; the same task as the classic "Haybale Stacking" problem  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2012 January Contest, Bronze — Problem 2: Haybale Stacking](https://usaco.org/index.php?page=viewproblem2&cpid=104)  
+**Difficulty:** Bronze  
+**Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
 
@@ -23,3 +24,7 @@ Difference Arrays, Sorting
 ## Files
 
 - [`src/RCAST.java`](src/RCAST.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2012 January Bronze "Haybale Stacking"; the folder keeps the AlphaStar title.

@@ -1,7 +1,7 @@
 # Barnscape Outline
 
-**Source:** Not publicly listed (practice / course problem)  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2005 November Contest, Silver — City Skyline (POJ 3044 mirror)](http://poj.org/problem?id=3044)  
+**Verified:** ⚪ Not verified automatically: no downloadable test data for this problem.
 
 ## Problem
 
@@ -25,3 +25,7 @@ Monotonic Stack, Greedy
 ## Files
 
 - [`src/BO.java`](src/BO.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2005 November Silver "City Skyline"; the folder keeps the AlphaStar title. That contest predates the problems hosted on usaco.org, so the link points to the POJ mirror and the solution could not be checked against official tests.

@@ -1,7 +1,8 @@
-# Acron Bracelet
+# Typo
 
-**Source:** Not publicly listed (practice / course problem)  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2012 November Contest, Bronze — Problem 2: Typo](https://usaco.org/index.php?page=viewproblem2&cpid=188)  
+**Difficulty:** Bronze  
+**Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
 
@@ -25,3 +26,7 @@ Bracket Sequences, Prefix Balance
 ## Files
 
 - [`src/AB.java`](src/AB.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2012 November Bronze "Typo"; the folder keeps the AlphaStar title.

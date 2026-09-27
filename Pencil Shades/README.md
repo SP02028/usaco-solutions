@@ -1,7 +1,8 @@
-# Pencil Shades
+# Painting the Fence
 
-**Source:** Not publicly listed (practice / course problem)  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2013 January Contest, Silver — Problem 1: Painting the Fence](https://usaco.org/index.php?page=viewproblem2&cpid=226)  
+**Difficulty:** Silver  
+**Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
 
@@ -24,3 +25,7 @@ Sweep Line, Difference Array on a TreeMap
 ## Files
 
 - [`src/PS.java`](src/PS.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2013 January Silver "Painting the Fence"; the folder keeps the AlphaStar title.

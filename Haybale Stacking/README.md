@@ -1,7 +1,8 @@
 # Haybale Stacking
 
-**Source:** [SPOJ — HAYBALE (Haybale Stacking)](https://www.spoj.com/problems/HAYBALE/)  
-**Verified:** ⚪ Not verified automatically: no downloadable test data for this problem.
+**Source:** [USACO 2012 January Contest, Bronze — Problem 2: Haybale Stacking](https://usaco.org/index.php?page=viewproblem2&cpid=104)  
+**Difficulty:** Bronze  
+**Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
 
