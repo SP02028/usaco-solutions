@@ -1,7 +1,8 @@
-# EV Tractor
+# Robot Instructions
 
-**Source:** Not publicly listed (practice / course problem)  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2022 February Contest, Silver — Problem 2: Robot Instructions](https://usaco.org/index.php?page=viewproblem2&cpid=1207)  
+**Difficulty:** Silver  
+**Verified:** ✅ Passes all 16 official USACO test cases.
 
 ## Problem
 
@@ -25,3 +26,7 @@ Meet in the Middle, Bitmask Enumeration, Hashing
 ## Files
 
 - [`src/EVT.java`](src/EVT.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2022 February Silver "Robot Instructions"; the folder keeps the AlphaStar title.

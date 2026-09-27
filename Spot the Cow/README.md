@@ -28,4 +28,4 @@ Complete Search, Flood Fill
 
 ## Notes
 
-This is the same task as USACO 2017 US Open Silver "Where's Bessie?", and the solution passes that problem's official tests.
+This is AlphaStar's reworded version of USACO 2017 US Open Silver "Where's Bessie?"; the folder keeps the AlphaStar title.

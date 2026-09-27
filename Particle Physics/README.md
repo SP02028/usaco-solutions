@@ -1,7 +1,8 @@
-# Particle Physics
+# Wormholes
 
-**Source:** Not publicly listed (practice / course problem)  
-**Verified:** ⚪ Not verified automatically: the problem is not publicly listed, so there is no test data.
+**Source:** [USACO 2013 December Contest, Bronze — Problem 3: Wormholes](https://usaco.org/index.php?page=viewproblem2&cpid=360)  
+**Difficulty:** Bronze  
+**Verified:** ✅ Passes all 10 official USACO test cases.
 
 ## Problem
 
@@ -24,3 +25,7 @@ Backtracking, Complete Search, Cycle Detection
 ## Files
 
 - [`src/PP.java`](src/PP.java)
+
+## Notes
+
+This is AlphaStar's reworded version of USACO 2013 December Bronze "Wormholes"; the folder keeps the AlphaStar title.
