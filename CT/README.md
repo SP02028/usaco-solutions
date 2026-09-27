@@ -1,17 +1,30 @@
-# CT
+# Concert Tickets
 
-## Problem Description
-[To be filled in]
+**Source:** [CSES Problem Set — Concert Tickets](https://cses.fi/problemset/task/1091)  
+**Verified:** ⚪ Not verified automatically: CSES does not publish its test data.
+
+## Problem
+
+n concert tickets with prices and m customers arriving in order, each with a maximum price. Each customer buys the most expensive remaining ticket they can afford, or gets −1.
 
 ## Approach
-[To be filled in]
+
+- Keep the ticket prices in a multiset (TreeMap of counts).
+- For each customer, take floorKey(budget); if one exists, print it and remove one copy.
 
 ## Complexity
-- Time Complexity: [To be filled in]
-- Space Complexity: [To be filled in]
 
-## Key Concepts
-[To be filled in]
+- **Time:** O((n + m) log n)
+- **Space:** O(n)
 
-## Solution
-See the source code file in this directory.
+## Concepts
+
+TreeMap, Multiset, Greedy
+
+## Files
+
+- [`CT.java`](CT.java)
+
+## Notes
+
+The folder name is short for Concert Tickets.
