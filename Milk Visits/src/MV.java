@@ -1,0 +1,87 @@
+import java.util.*;
+import java.io.*;
+
+public class MV {
+    static int[] parent, rank_;
+//DSU implementation: Will cover in another video. External Explanation Attached.
+    static int find(int x) {
+        while (parent[x] != x) {
+            parent[x] = parent[parent[x]]; // path compression
+            x = parent[x];
+        }
+        return x;
+    }
+
+    static void union(int a, int b) {
+        a = find(a); b = find(b);
+        if (a == b) return;
+        if (rank_[a] < rank_[b]) { int t = a; a = b; b = t; }
+        parent[b] = a;
+        if (rank_[a] == rank_[b]) rank_[a]++;
+    }
+
+    public static void main(String[] args) {
+        Kattio io = new Kattio();
+        int N = io.nextInt();
+        int M = io.nextInt();
+        char[] arr = io.next().toCharArray();
+
+        parent = new int[N];
+        rank_ = new int[N];
+        for (int i = 0; i < N; i++) parent[i] = i;
+        // only two breeds exist here
+        // union two cows ONLY if they're the same breed.
+        // what's left over is a bunch of components, each one entirely one breed, split apart wherever
+        // the breed actually changes along the tree.
+        for (int i = 0; i < N - 1; i++) {
+            int a = io.nextInt() - 1;
+            int b = io.nextInt() - 1;
+            if (arr[a] == arr[b]) union(a, b);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int j = 0; j < M; j++) {
+            int f = io.nextInt() - 1;
+            int t = io.nextInt() - 1;
+            char c = io.next().charAt(0);
+
+            boolean happy;
+            if (find(f) == find(t)) {
+                // same component = the WHOLE path is one breed. just check
+                // if that breed matches what we want.
+                happy = (arr[f] == c);
+            } else {
+                // different components = path HAS to cross a breed change
+                // somewhere, which means both breeds show up on it. so
+                // whatever breed C is, it's on there. always happy.
+                happy = true;
+            }
+            sb.append(happy ? '1' : '0');
+        }
+        io.println(sb.toString());
+        io.close();
+    }
+
+    static class Kattio extends PrintWriter {
+        private BufferedReader r;
+        private StringTokenizer st;
+        public Kattio() { this(System.in, System.out); }
+        public Kattio(InputStream i, OutputStream o) {
+            super(o);
+            r = new BufferedReader(new InputStreamReader(i));
+        }
+        public Kattio(String problemName) throws IOException {
+            super(problemName + ".out");
+            r = new BufferedReader(new FileReader(problemName + ".in"));
+        }
+        public String next() {
+            try {
+                while (st == null || !st.hasMoreTokens())
+                    st = new StringTokenizer(r.readLine());
+                return st.nextToken();
+            } catch (Exception e) {}
+            return null;
+        }
+        public int nextInt() { return Integer.parseInt(next()); }
+    }
+}

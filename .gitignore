@@ -6,3 +6,13 @@ bin/
 .classpath
 target/
 *.log
+
+# IntelliJ / macOS
+.idea/
+*.iml
+out/
+.DS_Store
+
+# School lab assignments (kept out of this repo)
+Java Labs/
+Lab_*/
