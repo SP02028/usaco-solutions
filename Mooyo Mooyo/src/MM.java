@@ -1,97 +1,124 @@
 import java.io.*;
 import java.util.*;
-public class MM {
-	static final int MAX_COLS = 10;
-	// Movement directions
-	static final int[][] MOVES = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-	static List<int[]> findRegion(char[][] grid, int row, int col) {
-		int n = grid.length;          // Number of rows
-		char color = grid[row][col];  // Color of the starting cell
-		ArrayDeque<int[]> queue = new ArrayDeque<>();
-		queue.add(new int[] {row, col});  // Start BFS from the given cell (row, col)
-		List<int[]> cells = new ArrayList<>();  // Stores coordinates of connected cells
-		boolean[][] visited = new boolean[n][MAX_COLS];
-		while (!queue.isEmpty()) {
-			int[] cell = queue.poll();
-			int currentRow = cell[0], currentCol = cell[1];
-			// Skip if the cell has already been visited
-			if (visited[currentRow][currentCol]) { 
-				continue; 
-				}
-			visited[currentRow][currentCol] = true;
-			cells.add(cell);  // Add the cell to the connected region
-			for (int[] move : MOVES) {
-				int nextRow = currentRow + move[0];
-				int nextCol = currentCol + move[1];
-				// Check if the neighboring cell is within bounds
-				if (nextRow >= 0 && nextRow < n && nextCol >= 0 && nextCol < MAX_COLS) {
-					// If the neighbor (nextRow, nextCol) has the same color
-					if (grid[nextRow][nextCol] == color) {
-						// Add the neighbor (nextRow, nextCol) to the queue
-						queue.add(new int[] {nextRow, nextCol});
-					}
-				}
-			}
-		}
-		return cells;
-	}
-	static List<List<int[]>> findRemovableRegions(char[][] grid, int k) {
-		int n = grid.length;
-		List<List<int[]>> removableRegions = new ArrayList<>();
-		boolean[][] visited = new boolean[n][MAX_COLS];
 
-		for (int row = 0; row < n; row++) {
-			for (int col = 0; col < MAX_COLS; col++) {
-				// Skip already visited cells or empty cells ('0')
-				if (grid[row][col] == '0' || visited[row][col]) { continue; }
-				char color = grid[row][col];
-				List<int[]> cells = findRegion(grid, row, col);
-				// Mark all cells in the region as visited
-				for (int[] cell : cells) { visited[cell[0]][cell[1]] = true; }
-				// If the region size meets the threshold, add it to the removable
-				// regions
-				if (cells.size() >= k) { removableRegions.add(cells); }
-			}
-		}
-		return removableRegions;
-	}
-	static void applyGravity(char[][] grid) {
-		int n = grid.length;
-		for (int col = 0; col < MAX_COLS; col++) {
-			int emptyRow = n - 1;  // Start from the bottom of the column
-			// Move non-empty cells to the lowest available position in the column
-			for (int row = n - 1; row >= 0; row--) {
-				if (grid[row][col] != '0') {
-					char temp = grid[emptyRow][col];
-					grid[emptyRow][col] = grid[row][col];
-					grid[row][col] = temp;
-					emptyRow--;
-				}
-			}
-		}
-	}
-	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("mooyomooyo.in"));
-		PrintWriter pw = new PrintWriter(new FileWriter("mooyomooyo.out"));
-		String[] firstLine = br.readLine().split(" ");
-		int n = Integer.parseInt(firstLine[0]);
-		int k = Integer.parseInt(firstLine[1]);
-		char[][] grid = new char[n][MAX_COLS];
-		for (int row = 0; row < n; row++) { grid[row] = br.readLine().toCharArray(); }
-		while (true) {
-			// Find all removable regions (regions of size >= k)
-			List<List<int[]>> removableRegions = findRemovableRegions(grid, k);
-			if (removableRegions.isEmpty()) { break; }
-			// Remove all identified regions by setting their cells to '0'
-			for (List<int[]> region : removableRegions) {
-				for (int[] cell : region) { grid[cell[0]][cell[1]] = '0'; }
-			}
-			// Apply gravity to the grid
-			applyGravity(grid);
-		}
-		for (char[] row : grid) { 
-			pw.println(new String(row)); 
-			}
-		pw.close();
-	}
+public class MM {
+    private static final int[][] DIRECTIONS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    static int[][] grid;
+    static int comps =0;
+    static    Map<Integer, List<Integer>> columnMap = new HashMap<>();
+    static int K;
+    static int N;
+    static boolean[][] visited;
+    public static void main(String[] args) {
+        Kattio kattio = new Kattio();
+        N = kattio.nextInt();
+        K = kattio.nextInt();
+        grid = new int[N][10];
+        visited = new boolean[N][10];
+        for (int i = 0; i < N; i++) {
+            String line = kattio.next();
+            for (int j = 0; j < 10; j++) {
+                grid[i][j] = Integer.parseInt(line.substring(j, j+1));
+            }
+        }
+        while(true){
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < 10; j++) {
+                    if(!visited[i][j] && grid[i][j]!= 0){
+                        bfsComponent(i, j, grid[i][j]);
+                    }
+                }
+            }
+            if(comps ==0) break;
+            int[][] grid2 = new int[N][10];
+            for (int i = 0; i < 10; i++) {
+                int[] freq = new int[N];
+                for (int j : columnMap.getOrDefault(i, Collections.emptyList())) {
+                    grid2[j][i]=0;
+                    freq[j]++;
+                }
+                int currrow =N-1;
+                for (int j = N-1; j >=0; j--) {
+                    if(freq[j] ==0){
+                        grid2[currrow][i]= grid[j][i];
+                        currrow--;
+                    }
+                }
+            }
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < 10; j++) {
+                    grid[i][j] = grid2[i][j];
+                }
+            }
+            //reset
+            columnMap.clear();
+            comps=0;
+            visited = new boolean[N][10];
+        }
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < 10; j++) {
+                kattio.print(grid[i][j]);
+            }
+            kattio.println();
+        }
+        kattio.close();
+    }
+
+    public static void bfsComponent(int startR, int startC, int targetValue) {
+        int rows = grid.length;
+        int cols = grid[0].length;
+
+        List<int[]> currentComponent = new ArrayList<>();
+        Queue<int[]> queue = new LinkedList<>();
+        visited[startR][startC] = true;
+        queue.add(new int[]{startR, startC});
+        currentComponent.add(new int[]{startR, startC});
+
+        while (!queue.isEmpty()) {
+            int[] cell = queue.poll();
+            int r = cell[0];
+            int c = cell[1];
+            for (int[] dir : DIRECTIONS) {
+                int nr = r + dir[0];
+                int nc = c + dir[1];
+                if (nr >= 0 && nr < rows && nc >= 0 && nc < cols && !visited[nr][nc] && grid[nr][nc] == targetValue) {
+
+                    visited[nr][nc] = true;
+                    queue.offer(new int[]{nr, nc});
+                    currentComponent.add(new int[]{nr, nc});
+                }
+            }
+        }
+
+        if (currentComponent.size() >= K) {
+            comps++;
+            for (int[] cell : currentComponent) {
+                int r = cell[0];
+                int c = cell[1];
+                columnMap.putIfAbsent(c, new ArrayList<>());
+                columnMap.get(c).add(r);
+            }
+        }
+    }
+    static class Kattio extends PrintWriter {
+        private BufferedReader r;
+        private StringTokenizer st;
+        public Kattio() { this(System.in, System.out); }
+        public Kattio(InputStream i, OutputStream o) {
+            super(o);
+            this.r = new BufferedReader(new InputStreamReader(i));
+        }
+        public String next() {
+            try {
+                while (st == null || !st.hasMoreTokens()) {
+                    String line = r.readLine();
+                    if (line == null) return null;
+                    st = new StringTokenizer(line);
+                }
+                return st.nextToken();
+            } catch (Exception e) { return null; }
+        }
+        public int nextInt() { return Integer.parseInt(next()); }
+        public long nextLong() { return Long.parseLong(next()); }
+    }
 }
